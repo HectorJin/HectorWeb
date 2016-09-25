@@ -262,11 +262,6 @@
 		</div>
 	</div>
 	<!--//slid-->
-	
-			</div>
-		</div>
-	</div>
-	<!--//gallery-->
 	<!--contact -->
 	<div class="welcome contact" id="contact">
 		<div class="container">

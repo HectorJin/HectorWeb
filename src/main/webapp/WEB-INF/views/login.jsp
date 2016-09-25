@@ -438,7 +438,7 @@ particlesJS('particles-js',
 
     <script type="text/javascript">
         var num = parseInt(Math.random()*5+1);
-        document.body.style.backgroundImage="url(http://cdn.maxjia.com/image/p_0"+num+".jpg)";
+        document.body.style.backgroundImage="url(/HectorWeb/styles/login/images/background_image0"+num+".jpg)";
     </script> 
     <div id="nav-bar">
         <div class="nav-head">
@@ -457,7 +457,7 @@ particlesJS('particles-js',
 </div>
 <!--<div style="position: absolute;top: -50px;left: 130px;color: #c23c2a;font-weight: 700;font-size: 14px;">NEW</div>-->
 <img src="/HectorWeb/styles/login/images/logo.png" style="width:120px;margin-bottom: 5px;">
-<div style="margin-top: 5px;margin-bottom: 20px;color:#ccc;font-size: 14px;font-weight: 600;">金了个魁个人站</div>
+<div style="margin-top: 5px;margin-bottom: 20px;color:#ccc;font-size: 14px;font-weight: 600;">雾灯港</div>
 
 <form action="http://www.dotamax.com/accounts/login/" id="login_form" method="post" name="rsa" style="font-size: 12px;">
 	<input type="hidden" name="csrfmiddlewaretoken" value="qSE78e37yuusrEQFws7hBZI8Eb3qrSOy">
