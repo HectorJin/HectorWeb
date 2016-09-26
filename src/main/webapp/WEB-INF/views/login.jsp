@@ -6,7 +6,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<title>Login WebSite</title>
-	<script src="/HectorWeb/styles/login/js/hm.js"></script><script async="" src="/HectorWeb/styles/login/js/analytics.js"></script><script>
+	<script src="/HectorWeb/styles/login/js/hm.js"></script><script async="" src="/HectorWeb/styles/login/js/analytics.js"></script>
+	<script>
     function DoNav(theUrl) {
         document.location.href = theUrl;
     }
@@ -33,286 +34,21 @@
         s.parentNode.insertBefore(hm, s);
     })();
     </script>
+    <script src="/HectorWeb/styles/login/js/jquery.js" type="text/javascript" charset="utf-8"></script>
     <script src="/HectorWeb/styles/login/js/jsbn.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/HectorWeb/styles/login/js/prng4.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/HectorWeb/styles/login/js/rng.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/HectorWeb/styles/login/js/rsa.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/HectorWeb/styles/login/js/base64.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" href="/HectorWeb/styles/login/css/font-awesome.min.css"><style type="text/css">
-body {
-    padding: 0px;
-    margin: 0px;
-    background-color: rgb(33,33,33);background-image:url('');background-size:cover;backgrond-attachment:fixed;background-position:center;position:relative;
-    color:#ccc;
-    font: 12px/1.5 Arial, 'Droid Sans', 'Hiragino Sans GB','Microsoft YaHei';
-}
-
-a {
-    color:#777;
-}
-
-a:hover, a:focus {
-    color:#fff;
-}
-#phoneLog:hover,#webLog:hover{
-	cursor: pointer;
-	}
-.top-radius{
-    border-top-left-radius: 2px;
-    border-top-right-radius:2px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius:0px;
-}
-
-.bottom-radius{
-    border-top-left-radius: 0px;
-    border-top-right-radius:0px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius:2px;
-}
-
-
-.all-radius{
-    border-top-left-radius: 2px;
-    border-top-right-radius:2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius:2px;
-}
-
-
-.login-input {
-    background-color: #fff; 
-    padding: 11px 10px 11px 13px;
-    display: block;
-    background-color: rgba(255,255,255,0.95);
-    border: 1px solid #fff;
-    margin: 0;
-    border: 0;
-    font-family: Helvetica, STHeiti;
-    font-size: 12px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 300px;
-}
-
-.login-input:focus{
-  
-}
-
-
-.breath {
-    filter: alpha(opacity=50);
-    -moz-opacity: 0.5;
-    opacity: 0.5;
-    -webkit-animation-name: breath;
-    -webkit-animation-duration: 8s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes 'breath' {
-    from {
-        filter: alpha(opacity=1);
-        -moz-opacity: 0.01;
-        opacity: 0.01;
-    }
-    30% {
-        filter: alpha(opacity=50);
-        -moz-opacity: 0.5;
-        opacity: 0.5;
-    }
-    70% {
-        filter: alpha(opacity=50);
-        -moz-opacity: 0.5;
-        opacity: 0.5;
-    }
-    to {
-        filter: alpha(opacity=1);
-        -moz-opacity: 0.01;
-        opacity: 0.01;
-    }
-}
-
-
-@-moz-keyframes fullexpand {
-    0% {
-        width: 0px;
-    }
-    15% {
-        width: 90%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@-webkit-keyframes fullexpand {
-    0% {
-        width: 0px;
-    }
-    15% {
-        width: 90%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-
-.trans {
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
-    -ms-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
-}
-
-*, *:active, *:focus {
-    outline: 0;
-    outline-style: none;
-    outline-width: 0;
-    -moz-outline-width: 0;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    text-decoration: none;
-}
-
-.login-in-btn {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 38px;
-    background-color: rgb(70,175,95);
-    background-color: rgba(70,175,95,0.9);
-    color: #fff;
-    border-radius: 2px;
-    width:300px;
-    height: 38px;
-    overflow: hidden;
-    white-space: nowrap;
-    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    cursor: pointer;
-}
-.login-in-btn:focus, .login-in-btn:hover {
-  background-color: rgb(90,225,125);
-    background-color: rgba(90,225,125,0.9);
-}
-
-.sign-up-btn {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 38px;
-    background-color: rgb(41,119,186);
-    background-color: rgba(41,119,186,0.9);
-    color: #fff;
-    border-radius: 2px;
-    width:300px;
-    height: 38px;
-    overflow: hidden;
-    white-space: nowrap;
-    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    cursor: pointer;
-}
-
-.sign-up-btn:focus, .sign-up-btn:hover {
-  background-color: rgb(61,139,226);
-    background-color: rgba(61,139,226,0.9);
-}
-
-.login-reply {
-  color:#ec3627;
-}
-
-.sign-up-btn-small {
-    font-family: Helvetica, STHeiti;
-    font-size: 13px;
-    text-align: center;
-    line-height: 35px;
-    background-color: rgba(41,119,186,0.8);
-    color: #fff;
-    border-radius: 2px;
-    margin-right: 15px;
-    margin-top: 7px;
-    width:60px;
-    height: 35px;
-    overflow: hidden;
-    white-space: nowrap;
-    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    float: left;
-}
-
-
-.sign-in-btn-small {
-    font-family: Helvetica, STHeiti;
-    font-size: 13px;
-    text-align: center;
-    line-height: 35px;
-    background-color: rgba(255,255,255,0.3);
-    color: #fff;
-    border-radius: 2px;
-    margin-right: 15px;
-    margin-top: 7px;
-    width:60px;
-    height: 35px;
-    overflow: hidden;
-    white-space: nowrap;
-    -webkit-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    -moz-transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    transition: all .25s cubic-bezier(.165,.84,.44,1),opacity 1ms linear;
-    float: left;
-    
-}
-
-
-.footer {
-    color:#777;
-}
-
-#nav-bar {
-    width: 100%;
-    background-color: rgba(10,10,10,0.15);
-    height: 50px;
-    position: absolute;
-    top:0px;
-}
-
-.nav-head {
-    width:100%;margin-left: auto;margin-right: auto;
-    height: 50px;
-}
-.selectLog:after{
-		clear:both;
-		content:"\200B";
-		display:block;
-		height:0;
-}
-.selectLog{
-	background-color: rgba(50,50,50,0.6);
-	border-bottom:1px solid rgba(50,50,50,1);
-}
-.selectLog >div:hover{
-	cursor: pointer;
-	color: white;
-}
-</style><style>
+<link rel="stylesheet" href="/HectorWeb/styles/login/css/font-awesome.min.css">
+<link rel="stylesheet" href="/HectorWeb/styles/login/css/login.css" type="text/css"></link>
+<style>
 	#phoneLog{float: left; border-bottom: 1px solid #fff;font-size: 15px;padding: 10px 0 10px 0;width: 190px;color: #fff;}
 	#webLog{float: right;border-bottom: 1px solid rgba(50,50,50,0);font-size: 15px;padding: 10px 0 10px 0;width: 189px;}
 	.selectLog .v-line{float: left;width: 1px;height: 43px;background-color: #323232;}
 </style></head>
-
-
-
-
-
 <body id="particles-js" style="background-image: url(&quot;http://cdn.maxjia.com/image/p_03.jpg&quot;);">
-
 <div style=""></div>
-
 <script src="/HectorWeb/styles/login/js/particles.min.js"></script>
 <script type="text/javascript">
 particlesJS('particles-js',
@@ -432,10 +168,8 @@ particlesJS('particles-js',
       "background_size": "cover"
     }
   }
-
 );
 </script><canvas class="particles-js-canvas-el" width="1366" height="623" style="width: 100%; height: 100%;"></canvas>
-
     <script type="text/javascript">
         var num = parseInt(Math.random()*5+1);
         document.body.style.backgroundImage="url(/HectorWeb/styles/login/images/background_image0"+num+".jpg)";
@@ -443,22 +177,17 @@ particlesJS('particles-js',
     <div id="nav-bar">
         <div class="nav-head">
             <a href="http://www.dotamax.com/home/"><div style="margin-top: 12px;margin-left: 30px;float: left;"><img src="/HectorWeb/styles/login/images/logo1.png" style="height: 25px;"></div></a>
-            <!--li class="sign-up-btn-small" style="float: right;margin-right: 30px;">注册</li>
-            <li class="sign-in-btn-small" style="float: right;">登陆</li-->
         </div>
     </div>
     <div style="z-index: 1000;position: absolute;top:20%;left :50%;margin: 0 0 0 -190px;">
-        <div style="margin-left: auto;margin-right: auto;width: 300px;text-align: center;background-color: rgba(50,50,50,0.6);padding: 20px 40px 60px 40px;position: relative;">
-            
-<div class="selectLog" style="position: absolute;left: 0px;top: -44px;width: 380px;">
-	<div id="phoneLog" onclick="show_div()" style="border-bottom: 1px solid white; color: white;">用户账号登录</div>
-	<div class="v-line"></div>
-	<div id="webLog" onclick="" style="border-bottom: 1px solid rgba(50, 50, 50, 0);">微信扫码登录</div>
-</div>
-<!--<div style="position: absolute;top: -50px;left: 130px;color: #c23c2a;font-weight: 700;font-size: 14px;">NEW</div>-->
+    <div id="login_table" style="margin-left: auto;margin-right: auto;width: 300px;text-align: center;background-color: rgba(50,50,50,0.6);padding: 20px 40px 60px 40px;position: relative;">
+	<div class="selectLog" style="position: absolute;left: 0px;top: -44px;width: 380px;">
+		<div id="phoneLog" onclick="show_div()" style="border-bottom: 1px solid white; color: white;">用户账号登录</div>
+		<div class="v-line"></div>
+		<div id="webLog" style="border-bottom: 1px solid rgba(50, 50, 50, 0);">微信扫码登录</div>
+	</div>
 <img src="/HectorWeb/styles/login/images/logo.png" style="width:120px;margin-bottom: 5px;">
 <div style="margin-top: 5px;margin-bottom: 20px;color:#ccc;font-size: 14px;font-weight: 600;">雾灯港</div>
-
 <form action="http://www.dotamax.com/accounts/login/" id="login_form" method="post" name="rsa" style="font-size: 12px;">
 	<input type="hidden" name="csrfmiddlewaretoken" value="qSE78e37yuusrEQFws7hBZI8Eb3qrSOy">
 	<input name="phoneNumCipherb64" type="hidden" value="">
@@ -472,110 +201,36 @@ particlesJS('particles-js',
 <input id="phoneNum" name="phoneNum" type="text" placeholder="手机号码" style="width: 300px; border-bottom: 1px solid rgb(227, 227, 227);" class="login-input top-radius" value="" required="">
 <input id="username" name="" type="text" placeholder="用户名" style="width: 300px; border-bottom: 1px solid rgb(227, 227, 227); display: none;" class="login-input top-radius" value="" required="">
 <input id="password" name="password" type="password" style="width:300px;margin-bottom:20px;" class="login-input bottom-radius" placeholder="密码" value="" required="">
-
 <div style="margin-left: 0px;margin-bottom: 5px;color:#ec3627">
-    
-        
-            
-            
-        
-    
 </div>
 <div id="login-btn" class="login-in-btn" style="margin-right: 10px;">
     登陆
 </div>
-<div class="sign-up-btn" onclick="" style="margin-right: 10px;margin-top: 10px;">
+<div id="create_btn" class="sign-up-btn" onclick="" style="margin-right: 10px;margin-top: 10px;">
    创建个人用户
 </div>
-<!--div class="sign-up-btn" onclick="DoNav('/register');">
-    创建我的Dotamax账号
-</div-->
-<div style="margin-top: 20px;text-align: left;">
+<div id="tops" style="margin-top: 20px;text-align: left;">
     <a href="http://www.dotamax.com/accounts/find_password/input/" style="margin-left: 3px;margin-top: 20px;color:#ccc;font-size: 12px;">忘记密码?</a>
 </div>
-    
-<script type="text/javascript">
-document.getElementById("rsa_n").value = "B81E72A33686A201B0AC009D679750990E3D168670DC6F9452C24E5A4C299AC002C6C89C3CB38784AEA95D66B7B3E9CA950EB9EEFB4EF61383EDDB67C35727F9CA87EE3238346C66D042B35812179501F472AD4F3BA19E701256FE0435AB856E5C5BEA24A2387153023CD4CD43CDA7260FCC1E2E49C14102C253F559F9A45D59DF5004A017B1239448A9A001D276CAD12535DEDE89FFBD57D75BBC9B575530DDD1B7FAD46064AD3C640CBD017F58981215B2EE17CBE175C36570C5235902818648577234E70E81133B088164F98E605D0D6E69A6095A32A72511E9AC901727B635CE2E8002A7B0EC8D012606903BCB825E60C7B6619FFCED4401E693F5EC68AB"
-document.getElementById("login-btn").onclick = function(){
-	do_encrypt();
-	document.getElementById('login_form').submit();
-	//debugger;
-}
-function do_encrypt(){
-  	//var before = new Date();
-  	var rsa = new RSAKey();
-  	rsa.setPublic(document.getElementById("rsa_n").value, document.getElementById("rsa_e").value);
-  	var phoneNum = rsa.encrypt(document.getElementById("phoneNum").value);
-  	var username = rsa.encrypt(document.getElementById("username").value);
-  	var password = rsa.encrypt(document.getElementById("password").value);
-  	//var after = new Date();
-  	if(phoneNum){
-    	//document.rsa.ciphertext.value = linebrk(res, 64);
-   		document.rsa.phoneNumCipherb64.value = linebrk(hex2b64(phoneNum), 64);
-    	//document.rsa.status.value = "Time: " + (after - before) + "ms";
-  	}
-  	if(username){
-   		document.rsa.usernameCipherb64.value = linebrk(hex2b64(username), 64);
-  	}
-  	if(password){
-   		document.rsa.passwordCipherb64.value = linebrk(hex2b64(password), 64);
-  	}
-}
-function show_div(){
-	document.getElementById("account-type").value='1';
-	document.getElementById("password").value='';
-	document.getElementById("username").style.display='none';
-	document.getElementById("username").setAttribute("name","");
-	document.getElementById("phoneNum").style.display='';
-	document.getElementById("phoneNum").setAttribute("name","phoneNum");
-	document.getElementById("phoneLog").style.cssText="border-bottom: 1px solid white;color: white;"	
-	document.getElementById("webLog").style.cssText="border-bottom: 1px solid rgba(50,50,50,0);"	
-}
-function show_div1(){
-	document.getElementById("account-type").value='2';
-	document.getElementById("password").value='';
-	document.getElementById("username").style.display='';
-	document.getElementById("username").setAttribute("name","username");
-	document.getElementById("phoneNum").style.display='none';
-	document.getElementById("phoneNum").setAttribute("name","");
-	document.getElementById("webLog").style.cssText="border-bottom: 1px solid white;color: white;"
-	document.getElementById("phoneLog").style.cssText="border-bottom: 1px solid rgba(50,50,50,0);"
-}
-
-document.onkeydown = function(){
-    if(event.keyCode==13){
-        document.getElementById("login-btn").click();   
-        return false;                               
-    }
-}
-</script>
-
+<div><img src="/HectorWeb/styles/login/images/weChat.jpg" id="weChat_img" style="display:none;"></div>
+<script src="/HectorWeb/styles/login/js/wechat.js" type="text/javascript" charset="utf-8"></script>
             <div style="position: absolute;right:40px;bottom: 20px;"><a href="javascript:history.go(-1)" style="color: rgb(152, 152, 152)">返回</a></div>
         </div>
     </div>
     <div style="position: fixed;bottom:20px;width: 100%;">
         <div class="footbar" style="padding-bottom:10px;text-align: center;">
-          
                 <div style="position: absolute;left:0px;bottom:10px;">
-                   
                     <div style="float:left;margin-left: 20px"><a target="_blank" href="mailto:jinkui0629@sina.cn"><i title="商务合作" class="fa fa-envelope-o" style="font-size: 16px;padding-top: 1px;"></i></a></div>
-                    
                     <div style="float:left;margin-left: 20px"><a target="_blank" href="http://blog.csdn.net/qq_30535701"><i title="iOS App" class="fa fa-apple" style="font-size: 18px"></i></a></div>
                     <div style="float:left;margin-left: 20px"><a target="_blank" href="http://www.dotamax.com/app/"><i title="Android App" class="fa fa-android" style="font-size: 18px"></i></a></div>
                     <div style="float:left;margin-left: 20px"><a target="_blank" href=""><i title="反馈群:74188215" class="fa fa-qq" style="font-size: 16px;padding-top: 2px;"></i></a></div>
-					
                 </div>
                 <div style="position: absolute;right:0px;bottom:10px;">
                   	<div style="float:right;margin-right: 20px"><a target="_blank" href="http://www.dotamax.com/status/"><i title="状态" class="fa fa-heartbeat" style="font-size: 18px"></i></a></div>
                     <div style="float:right;margin-right: 20px"><a target="_blank" href="http://www.dotamax.com/summary/"><i title="统计" class="fa fa-bar-chart" style="font-size: 18px"></i></a></div>
-                    
                     <div style="float:right;margin-right: 20px"><a target="_blank" href="http://weibo.com/5606942020/profile?topnav=1&amp;wvr=6"><i title="新浪微博" class="fa fa-weibo" style="font-size: 18px"></i></a></div>
                     <div style="float:right;margin-right: 20px"><a target="_blank" href="http://t.qq.com/dotamax?preview"><i title="腾讯微博" class="fa fa-tencent-weibo" style="font-size: 18px"></i></a></div>
-                    
                 </div>
           </div>
       </div>
-    
-
-
 </body></html>
